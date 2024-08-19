@@ -44,9 +44,9 @@ jobs:
       run: |
         cat /etc/os-release
         ls -al
-        git clone https://huggingface.co/lllyasviel/control_v11p_sd15_openpose
+        git clone https://github.com/coolsnowwolf/lede.git
         ls -al
-        7za a -m0=lzma2 -mx=9 -ms=on download.7z control_v11p_sd15_openpose/
+        7za a -m0=lzma2 -mx=9 -ms=on lede.7z lede/
         ls -al
 
     - name: SSH connection to Actions
@@ -61,4 +61,4 @@ jobs:
       if: steps.compile.outputs.status == 'success'
       with:
         name: Download
-        path: download.7z
+        path: lede.7z
