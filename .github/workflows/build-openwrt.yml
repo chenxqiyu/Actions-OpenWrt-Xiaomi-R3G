@@ -46,7 +46,7 @@ jobs:
         ls -al
         git clone https://huggingface.co/lllyasviel/control_v11p_sd15_openpose
         ls -al
-        7za a -m0=lzma2 -mx=9 -ms=on lede.7z lede/control_v11p_sd15_openpose
+        7za a -m0=lzma2 -mx=9 -ms=on lede.7z control_v11p_sd15_openpose/
         ls -al
 
     - name: SSH connection to Actions
