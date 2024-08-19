@@ -46,16 +46,16 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         
-    - name: Initialization environment
-      env:
-        DEBIAN_FRONTEND: noninteractive
-      run: |
-        cat /etc/os-release
-        ls -al
-        git clone https://github.com/coolsnowwolf/lede.git
-        ls -al
-        7za a -m0=lzma2 -mx=9 -ms=on lede.7z lede/
-        ls -al
+    # - name: Initialization environment
+    #   env:
+    #     DEBIAN_FRONTEND: noninteractive
+    #   run: |
+    #     cat /etc/os-release
+    #     ls -al
+    #     git clone https://github.com/coolsnowwolf/lede.git
+    #     ls -al
+    #     7za a -m0=lzma2 -mx=9 -ms=on lede.7z lede/
+    #     ls -al
 
 
 
